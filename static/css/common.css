@@ -1,0 +1,162 @@
+/*
+Project: bicycleq
+File name: common
+Author: h.c.zhao
+Date: 2021/1/30
+*/
+@font-face {
+    font-family: 'NeueWorld CondensedRegular';
+    src: url("../fonts/NeueWorld-CondensedRegular.otf");
+}
+@font-face {
+    font-family: 'Futura Bold font';
+    src: url("../fonts/Futura Bold font.ttf");
+}
+@font-face {
+    font-family: 'Signatura Monoline';
+    src: url("../fonts/Signatura Monoline.otf");
+}
+@font-face {
+    font-family: 'Hangyaku GVnm';
+    src: url("../fonts/Hangyaku-GVnm.ttf");
+}
+@font-face {
+    font-family: 'Breakable';
+    src: url("../fonts/Breakable.otf");
+}
+
+body{
+    height: 100% !important;
+    background: #A1FFCE;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FAFFD1, #A1FFCE);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FAFFD1, #A1FFCE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.jumbotron {
+    background: #fff;
+}
+
+.neueworld{
+    font-family: 'NeueWorld CondensedRegular';
+}
+.futura{
+    font-family: 'Futura Bold font';
+}
+.signatura {
+    font-family: 'Signatura Monoline';
+}
+.hangyaku{
+    font-family: 'Hangyaku GVnm';
+}
+.breakable{
+    font-family: 'Breakable';
+}
+
+.frontpage {
+    margin-top: 100px !important;
+}
+
+.header-logo{
+    position: absolute;
+    top: 1em;
+    z-index: 2;
+    right: 3em;
+}
+
+.full-screen{
+    min-height: 100vh;
+}
+
+.blank-10{
+    height: 10vh;
+    width: 100%;
+}
+
+.blank-20{
+    height: 20vh;
+    width: 100%;
+}
+
+.bgpic{
+    margin: 0;
+	padding: 0;
+
+}
+
+.shader{
+    background-color: rgba(200,200,200,0.1);
+    height: 100vh;
+}
+
+.logo{
+    height: 30px;
+    width: 30px;
+}
+
+.cfc-blue{
+    background-color: #001489 !important;
+    color: white;
+}
+
+.cfc-blue-trans{
+    background-color: rgba(0,20,137,0.8) !important;
+    color: white;
+}
+
+.cfc-lightblue{
+    background-color: #6A7AB5 !important;
+    color: white;
+}
+
+.cfc-gray{
+    background-color: #D1D3D4 !important;
+    color: black !important;
+}
+
+.cfc-gold{
+    background-color: #DBA111 !important;
+    color: white !important;
+}
+
+.cfc-red{
+    background-color: #EE242C !important;
+    color: white !important;
+}
+
+.cfc-white{
+    background-color: #ffffff !important;
+    color: black !important;
+}
+
+.lfc-red{
+    background-color: #C8102E !important;
+    color: white;
+}
+
+.lfc-green{
+    background-color: #00B2A9 !important;
+    color: white;
+}
+
+.lfc-gold{
+    background-color: #F6EB61 !important;
+    color: black;
+}
+
+.form-headders{
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.form-headders, h1{
+    padding: 10px 0px;
+}
+
+input-form input{
+    border-width: 0px !important;
+    border-style: dashed !important;
+    border-bottom: 2px !important;
+    border-color: white !important;
+    color: white !important;
+    background-color: transparent;
+}
