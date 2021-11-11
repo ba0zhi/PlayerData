@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FIFA Fan Site</title>
+    <link href="{% static '/css/common.css' %}" rel="stylesheet">
+    <link href="{% static '/css/bootstrap-4.4.1-dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="{% static '/css/bootstrap-4.4.1-dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static '/js/echarts.min.js' %}"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <a class="navbar-brand " href="{% url 'index' %}">
+            Footballer
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="{% url 'homepage' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="{% url 'clubs' %}">Clubs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="{% url 'players' %}">Players</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="{% url 'similar_player' %}">Similarity</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="{% url 'predict_player' %}">Prediction</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-lg">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
