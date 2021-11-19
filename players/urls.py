@@ -1,13 +1,12 @@
 from django.contrib import admin
 from django.urls import path
-from players import views
-
+from django.conf.urls import url
 from . import views
 
 urlpatterns = [
     path('', views.homepage, name='homepage'),
-    path('clubs', views.clubs, name='clubs'),
-    path('players', views.players, name='players'),
-    path('predict_player', views.predict_player, name='predict_player'),
-    path('similar_player', views.similar_player, name='similar_player'),
+    path(r'clubs', views.clubs, name='clubs'),
+    path(r'prediction', views.prediction, name='prediction'),
+    path(r'similarity', views.similarity, name='similarity'),
+    path(r'players', views.players, name='players'),
 ]

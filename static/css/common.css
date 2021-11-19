@@ -20,6 +20,10 @@
     src: url("../fonts/Breakable.otf");
 }
 
+body{
+    height: 100% !important;
+}
+
 .neueworld{
     font-family: 'NeueWorld CondensedRegular';
 }
@@ -34,4 +38,8 @@
 }
 .breakable{
     font-family: 'Breakable';
+}
+
+.bg-pitch{
+    background-image: url("/../images/background.jpg");
 }

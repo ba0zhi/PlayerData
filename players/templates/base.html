@@ -14,7 +14,7 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg sticky-top">
         <a class="navbar-brand " href="{% url 'index' %}">
             Footballer
         </a>
@@ -33,10 +33,10 @@
                     <a class="nav-link text-light" href="{% url 'players' %}">Players</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="{% url 'similar_player' %}">Similarity</a>
+                    <a class="nav-link text-light" href="{% url 'similarity' %}">Similarity</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="{% url 'predict_player' %}">Prediction</a>
+                    <a class="nav-link text-light" href="{% url 'prediction' %}">Prediction</a>
                 </li>
             </ul>
         </div>

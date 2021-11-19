@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="my-5">
+    <div class="container-lg h-100">
+        <div class="col-lg-12">
+            <div class="card rounded-lg h-100">
+                <div class="card-header text-white bg-dark">
+                    <h3>Player List</h3>
+                </div>
+                <div class="card-body bg-light">
+                    <div class="container-lg">
+                        <div class="col-lg-12">
+                            <div class="card rounded-lg h-100">
+                                <div class="card-header text-white bg-dark">
+                                    <form class="float-lg-right my-auto">
+                                        <div class="form-row align-items-center">
+                                            <div class="col-auto">
+                                                <label class="sr-only" for="inlineFormInput">Name</label>
+                                                <input type="text" class="form-control" id="inlineFormInput" placeholder="Name">
+                                            </div>
+                                            <div class="col-auto">
+                                                <button type="submit" class="btn btn-light">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="card-body bg-light">
+                                    <div class="container-lg">
+                                        <div class="col-lg-12">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr class="text-center">
+                                                        <th scope="col">Name</th>
+                                                        <th scope="col">Club</th>
+                                                        <th scope="col">Logo</th>
+                                                        <th scope="col">Age</th>
+                                                        <th scope="col">Nationality</th>
+                                                        <th scope="col">Position</th>
+                                                        <th scope="col">Foot</th>
+                                                        <th scope="col">Overall</th>
+                                                        <th scope="col">Detail</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="text-center">
+                                                        <td>M.Mount</td>
+                                                        <td>Chelsea</td>
+                                                        <td><img src=""></td>
+                                                        <td>22</td>
+                                                        <td><img src="">ENG</td>
+                                                        <td>CAM</td>
+                                                        <td>Right</td>
+                                                        <td>83</td>
+                                                        <td><a class="btn btn-sm btn-block btn-dark text-white">See Future</a></td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>M.Mount</td>
+                                                        <td>Chelsea</td>
+                                                        <td><img src=""></td>
+                                                        <td>22</td>
+                                                        <td><img src="">ENG</td>
+                                                        <td>CAM</td>
+                                                        <td>Right</td>
+                                                        <td>83</td>
+                                                        <td><a class="btn btn-sm btn-block btn-dark text-white">See Future</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <nav class="float-lg-right" aria-label="Page navigation example">
+                                                <ul class="pagination">
+                                                    <li class="page-item">
+                                                        <a class="page-link bg-dark text-white" href="#" aria-label="Previous">
+                                                            <span aria-hidden="true">&laquo;</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link bg-dark text-white" href="#">1</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link bg-dark text-white" href="#">2</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link bg-dark text-white" href="#">3</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link bg-dark text-white" href="#" aria-label="Next">
+                                                            <span aria-hidden="true">&raquo;</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
