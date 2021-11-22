@@ -39,11 +39,7 @@ def homepage(request):
     return render(request, "players/homepage.html")
 
 
-def players(request):
-
-    player_info_2022 = PlayerInfo22.objects.all().exclude( contract_valid_until__lt = 2022 )
-    player_basics_2022 = PlayerBasics.objects.all()
-
+def athletes(request):
     player_list_2022 = []
     player_tuple_2022 = PlayerInfo22.objects.values_list('id_id__name',
                                                          'club',
@@ -66,14 +62,14 @@ def players(request):
                      'overall': each[8]}
         player_list_2022.append(temp_dict)
 
-    pag = Paginator(player_list_2022, 20)
-    page = pag.page(index)
+    pag = Paginator(player_list_2022, 30)
+    page = pag.page(12)
 
     res_dict = {
         "players_2022": page
     }
 
-    return render(request, "players/players.html", res_dict)
+    return render(request, "players/athletes.html", {"players_2022": page})
 
 
 def prediction(request):
@@ -82,3 +78,7 @@ def prediction(request):
 
 def similarity(request):
     return render(request, "players/similarity.html")
+
+
+def player_detail(request):
+    return render(request, "players/player_detail.html")

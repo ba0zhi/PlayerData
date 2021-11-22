@@ -43,3 +43,11 @@ body{
 .bg-pitch{
     background-image: url("/../images/background.jpg");
 }
+
+.bg-black{
+    background-color: black !important;
+}
+
+.bg-body{
+    background-color: #100C2A !important;
+}

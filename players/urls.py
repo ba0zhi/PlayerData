@@ -8,5 +8,6 @@ urlpatterns = [
     path(r'clubs', views.clubs, name='clubs'),
     path(r'prediction', views.prediction, name='prediction'),
     path(r'similarity', views.similarity, name='similarity'),
-    path(r'players', views.players, name='players'),
+    path(r'athletes', views.athletes, name='athletes'),
+    path(r'player_detail', views.player_detail, name='player_detail'),
 ]

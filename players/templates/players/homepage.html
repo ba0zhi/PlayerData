@@ -1,8 +1,59 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
+<section class="my-5">
+    <div class="container-fluid h-100">
+        <div class="row row-cols-2">
+            <div class="col my-4">
+                <div class="card border-dark">
+                    <img src="{% static '/images/Clubs.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">Clubs</h3>
+                        <p class="card-text">You can view clubs in this section</p>
+                        <a href="{% url 'clubs' %}"
+                           class="btn btn-sm btn-block bg-black text-white">Go</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-4">
+                <div class="card border-dark">
+                    <img src="{% static '/images/Players.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">Players</h3>
+                        <p class="card-text">You can view clubs in this section</p>
+                        <a href="{% url 'athletes' %}"
+                           class="btn btn-sm btn-block bg-black text-white">Go</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-4">
+                <div class="card border-dark">
+                    <img src="{% static '/images/Prediction.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">Prediction</h3>
+                        <p class="card-text">You can view clubs in this section</p>
+                        <a href="{% url 'prediction' %}"
+                           class="btn btn-sm btn-block bg-black text-white">Go</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-4">
+                <div class="card border-dark">
+                    <img src="{% static '/images/Similarity.jpeg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h3 class="card-title">Similarity</h3>
+                        <p class="card-text">You can view clubs in this section</p>
+                        <a href="{% url 'similarity' %}"
+                           class="btn btn-sm btn-block bg-black text-white">Go</a>
+                    </div>
+                </div>
+            </div>
 
-<h1>Homepage</h1>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %}

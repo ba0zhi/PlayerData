@@ -5,15 +5,15 @@
 <section class="my-5">
     <div class="container-lg h-100">
         <div class="col-lg-12">
-            <div class="card rounded-lg h-100">
-                <div class="card-header text-white bg-dark">
+            <div class="card rounded-lg h-100 border-dark">
+                <div class="card-header text-white bg-black">
                     <h3>Player List</h3>
                 </div>
                 <div class="card-body bg-light">
                     <div class="container-lg">
                         <div class="col-lg-12">
                             <div class="card rounded-lg h-100">
-                                <div class="card-header text-white bg-dark">
+                                <div class="card-header text-white bg-black">
                                     <form class="float-lg-right my-auto">
                                         <div class="form-row align-items-center">
                                             <div class="col-auto">
@@ -37,6 +37,7 @@
                                                         <th scope="col">Logo</th>
                                                         <th scope="col">Age</th>
                                                         <th scope="col">Nationality</th>
+                                                        <th scope="col">Flag</th>
                                                         <th scope="col">Position</th>
                                                         <th scope="col">Foot</th>
                                                         <th scope="col">Overall</th>
@@ -50,11 +51,15 @@
                                                         <td>{{each.club}}</td>
                                                         <td><img src="{{each.logo}}"></td>
                                                         <td>{{each.age}}</td>
-                                                        <td><img src="{{each.flag}}">{{each.nationality}}</td>
+                                                        <td>{{each.nationality}}</td>
+                                                        <td><img src="{{each.flag}}"></td>
                                                         <td>{{each.position}}</td>
                                                         <td>{{each.foot}}</td>
                                                         <td>{{each.overall}}</td>
-                                                        <td><a class="btn btn-sm btn-block btn-dark text-white">DETAIL</a></td>
+                                                        <td>
+                                                            <a href="{% url 'player_detail' %}"
+                                                               class="btn btn-sm btn-block bg-black text-white">DETAIL</a>
+                                                        </td>
                                                     </tr>
                                                     {% endfor %}
                                                 </tbody>
@@ -62,21 +67,21 @@
                                             <nav class="float-lg-right" aria-label="Page navigation example">
                                                 <ul class="pagination">
                                                     <li class="page-item">
-                                                        <a class="page-link bg-dark text-white" href="#" aria-label="Previous">
+                                                        <a class="page-link bg-black text-white" href="#" aria-label="Previous">
                                                             <span aria-hidden="true">&laquo;</span>
                                                         </a>
                                                     </li>
                                                     <li class="page-item">
-                                                        <a class="page-link bg-dark text-white" href="#">1</a>
+                                                        <a class="page-link bg-black text-white" href="#">1</a>
                                                     </li>
                                                     <li class="page-item">
-                                                        <a class="page-link bg-dark text-white" href="#">2</a>
+                                                        <a class="page-link bg-black text-white" href="#">2</a>
                                                     </li>
                                                     <li class="page-item">
-                                                        <a class="page-link bg-dark text-white" href="#">3</a>
+                                                        <a class="page-link bg-black text-white" href="#">3</a>
                                                     </li>
                                                     <li class="page-item">
-                                                        <a class="page-link bg-dark text-white" href="#" aria-label="Next">
+                                                        <a class="page-link bg-black text-white" href="#" aria-label="Next">
                                                             <span aria-hidden="true">&raquo;</span>
                                                         </a>
                                                     </li>
