@@ -5,14 +5,14 @@
 
 <section class="my-5">
     <div class="container-fluid h-100">
-        <div class="row row-cols-2">
+        <div class="row row-cols-2 mx-5">
             <div class="col my-4">
                 <div class="card border-dark">
                     <img src="{% static '/images/Clubs.jpeg' %}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h3 class="card-title">Clubs</h3>
-                        <p class="card-text">You can view clubs in this section</p>
-                        <a href="{% url 'clubs' %}"
+                        <h3 class="card-title">Scatters</h3>
+                        <p class="card-text">You can view the scatter plot of players from different aspects</p>
+                        <a href="{% url 'scatters' %}"
                            class="btn btn-sm btn-block bg-black text-white">Go</a>
                     </div>
                 </div>
@@ -22,8 +22,8 @@
                     <img src="{% static '/images/Players.jpeg' %}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h3 class="card-title">Players</h3>
-                        <p class="card-text">You can view clubs in this section</p>
-                        <a href="{% url 'athletes' %}"
+                        <p class="card-text">You can view the players' list</p>
+                        <a href="{% url 'athletes' 1 %}"
                            class="btn btn-sm btn-block bg-black text-white">Go</a>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                     <img src="{% static '/images/Prediction.jpeg' %}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h3 class="card-title">Prediction</h3>
-                        <p class="card-text">You can view clubs in this section</p>
+                        <p class="card-text">You can view the predicted rating of players in 2023</p>
                         <a href="{% url 'prediction' %}"
                            class="btn btn-sm btn-block bg-black text-white">Go</a>
                     </div>
@@ -44,8 +44,8 @@
                     <img src="{% static '/images/Similarity.jpeg' %}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h3 class="card-title">Similarity</h3>
-                        <p class="card-text">You can view clubs in this section</p>
-                        <a href="{% url 'similarity' %}"
+                        <p class="card-text">You can view the similarity of players, but you have to pick a player first</p>
+                        <a href="{% url 'athletes' 1 %}"
                            class="btn btn-sm btn-block bg-black text-white">Go</a>
                     </div>
                 </div>

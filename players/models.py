@@ -12,6 +12,9 @@ class PlayerBasics(models.Model):
     flag = models.CharField(max_length=400, default='N/A')
     preferred_foot = models.CharField(max_length=10, default='N/A')
 
+    def __str__(self):
+        return str(self.id)
+
 # These tables stores the player information which are not relevant for clustering
 class PlayerInfo17(models.Model):
     id = models.ForeignKey(PlayerBasics, max_length=200, on_delete=models.CASCADE, primary_key= True)
@@ -37,6 +40,10 @@ class PlayerInfo17(models.Model):
     best_overall = models.FloatField(default=0.0)
     release_clause = models.CharField(max_length=10, default='N/A', null = True)
 
+    def __str__(self):
+        return str(self.id)
+
+
 class PlayerInfo18(models.Model):
     id = models.ForeignKey(PlayerBasics, max_length=200, on_delete=models.CASCADE, primary_key= True)
     overall = models.FloatField(default=0.0)
@@ -60,6 +67,10 @@ class PlayerInfo18(models.Model):
     best_position = models.CharField(max_length=10, default='N/A')
     best_overall = models.FloatField(default=0.0)
     release_clause = models.CharField(max_length=10, default='N/A')
+
+    def __str__(self):
+        return str(self.id)
+
 
 class PlayerInfo19(models.Model):
     id = models.ForeignKey(PlayerBasics, max_length=200, on_delete=models.CASCADE, primary_key= True)
@@ -85,6 +96,10 @@ class PlayerInfo19(models.Model):
     best_overall = models.FloatField(default=0.0)
     release_clause = models.CharField(max_length=10, default='N/A')
 
+    def __str__(self):
+        return str(self.id)
+
+
 class PlayerInfo20(models.Model):
     id = models.ForeignKey(PlayerBasics, max_length=200, on_delete=models.CASCADE, primary_key= True)
     overall = models.FloatField(default=0.0)
@@ -108,6 +123,10 @@ class PlayerInfo20(models.Model):
     best_position = models.CharField(max_length=10, default='N/A')
     best_overall = models.FloatField(default=0.0)
     release_clause = models.CharField(max_length=10, default='N/A')
+
+    def __str__(self):
+        return str(self.id)
+
 
 class PlayerInfo21(models.Model):
     id = models.ForeignKey(PlayerBasics, max_length=200, on_delete=models.CASCADE, primary_key= True)
@@ -133,6 +152,10 @@ class PlayerInfo21(models.Model):
     best_overall = models.FloatField(default=0.0)
     release_clause = models.CharField(max_length=10, default='N/A')
 
+    def __str__(self):
+        return str(self.id)
+
+
 class PlayerInfo22(models.Model):
     id = models.ForeignKey(PlayerBasics, max_length=200, on_delete=models.CASCADE, primary_key= True)
     overall = models.FloatField(default=0.0)
@@ -156,6 +179,9 @@ class PlayerInfo22(models.Model):
     best_position = models.CharField(max_length=10, default='N/A')
     best_overall = models.FloatField(default=0.0)
     release_clause = models.CharField(max_length=10, default='N/A')
+
+    def __str__(self):
+        return str(self.id)
 
 # These tables stores the player data which will be used in algorithms
 class PlayerStatus17(models.Model):
@@ -198,6 +224,10 @@ class PlayerStatus17(models.Model):
     gk_reflexes = models.FloatField(default=0.0)
     defensive_awareness = models.FloatField(default=0.0)
 
+    def __str__(self):
+        return str(self.id)
+
+
 class PlayerStatus18(models.Model):
     id = models.ForeignKey(PlayerInfo18, on_delete=models.CASCADE, primary_key= True)
     week_foot = models.FloatField(default=0.0)
@@ -237,6 +267,10 @@ class PlayerStatus18(models.Model):
     gk_positioning = models.FloatField(default=0.0)
     gk_reflexes = models.FloatField(default=0.0)
     defensive_awareness = models.FloatField(default=0.0)
+
+    def __str__(self):
+        return str(self.id)
+
 
 class PlayerStatus19(models.Model):
     id = models.ForeignKey(PlayerInfo19, on_delete=models.CASCADE, primary_key= True)
@@ -278,6 +312,10 @@ class PlayerStatus19(models.Model):
     gk_reflexes = models.FloatField(default=0.0)
     defensive_awareness = models.FloatField(default=0.0)
 
+    def __str__(self):
+        return str(self.id)
+
+
 class PlayerStatus20(models.Model):
     id = models.ForeignKey(PlayerInfo20, on_delete=models.CASCADE, primary_key= True)
     week_foot = models.FloatField(default=0.0)
@@ -317,6 +355,10 @@ class PlayerStatus20(models.Model):
     gk_positioning = models.FloatField(default=0.0)
     gk_reflexes = models.FloatField(default=0.0)
     defensive_awareness = models.FloatField(default=0.0)
+
+    def __str__(self):
+        return str(self.id)
+
 
 class PlayerStatus21(models.Model):
     id = models.ForeignKey(PlayerInfo21, on_delete=models.CASCADE, primary_key= True)
@@ -358,8 +400,12 @@ class PlayerStatus21(models.Model):
     gk_reflexes = models.FloatField(default=0.0)
     defensive_awareness = models.FloatField(default=0.0)
 
+    def __str__(self):
+        return str(self.id)
+
+
 class PlayerStatus22(models.Model):
-    id = models.ForeignKey(PlayerInfo22, on_delete=models.CASCADE, primary_key= True)
+    id = models.ForeignKey(PlayerInfo22, on_delete=models.CASCADE, primary_key=True)
     week_foot = models.FloatField(default=0.0)
     skill_moves = models.FloatField(default=0.0)
     crossing = models.FloatField(default=0.0)
@@ -397,3 +443,7 @@ class PlayerStatus22(models.Model):
     gk_positioning = models.FloatField(default=0.0)
     gk_reflexes = models.FloatField(default=0.0)
     defensive_awareness = models.FloatField(default=0.0)
+
+    def __str__(self):
+        return str(self.id)
+

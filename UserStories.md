@@ -17,7 +17,7 @@
    - Must 
  - [ ] User will be able to filter players by different columns
    - Should
- - [ ] User will be able to search for certain player by name
+ - [x] User will be able to search for certain player by name
    - Must
  - [ ] User will be able to view detail of each player in a radar graph
    - Must   
@@ -27,9 +27,9 @@
  - [ ] User will be able to view a prediction of player's feature in a modal
    - Must  
 ## Similarity Page
- - [ ] User will be able to browse a list of players
+ - [x] User will be able to browse a list of players
    - Must
- - [ ] User will be able to browse a list of similar player with the selected one
+ - [x] User will be able to browse a list of similar player with the selected one
    - Must  
  - [ ] User will be able to see a stacked radar chart of two players
    - Must 

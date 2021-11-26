@@ -28,13 +28,13 @@
                     <a class="nav-link text-light" href="{% url 'homepage' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="{% url 'clubs' %}">Clubs</a>
+                    <a class="nav-link text-light" href="{% url 'scatters' %}">Scatters</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="{% url 'athletes' %}">Players</a>
+                    <a class="nav-link text-light" href="{% url 'athletes' 1 %}">Players</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-light" href="{% url 'similarity' %}">Similarity</a>
+                    <a class="nav-link text-light" href="{% url 'athletes' 1 %}">Similarity</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-light" href="{% url 'prediction' %}">Prediction</a>
@@ -42,7 +42,7 @@
             </ul>
         </div>
     </nav>
-    <div class="container-lg">
+    <div>
         {% block content %}
         {% endblock %}
     </div>

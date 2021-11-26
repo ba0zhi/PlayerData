@@ -4,12 +4,12 @@
 {% block content %}
 
 <section class="my-5">
-    <div class="container-lg h-100">
-        <div class="col-lg-12">
-            <div class="card rounded-lg h-100">
+    <div class="container-fluid h-100">
+        <div class="col-10 offset-1">
+            <div class="card rounded-lg h-100 border-0">
                 <div class="card-header text-white bg-black">
-                    <h3 class="float-left">Iniesta</h3>
-                    <a href="{% url 'similarity' %}" class="btn btn-light float-right mx-2 text-dark">Find Similar Player</a>
+                    <h3 class="float-left">{{ player_name }}</h3>
+                    <a href="{% url 'similarity' player_id %}" class="btn btn-light float-right mx-2 text-dark">Find Similar Player</a>
                     <button type="button"
                             class="btn btn-light float-right mx-2 text-dark"
                             data-toggle="modal"
@@ -18,22 +18,22 @@
                     </button>
                 </div>
                 <div class="card-body bg-black h-100">
-                    <div class="container-lg">
+                    <div class="container-fluid">
                         <div class="row card-deck">
-                            <div class="col-5">
+                            <div class="col-4">
                                 <div class="card">
                                     <div class="card-body bg-white rounded-lg">
-                                        <div class="container-lg">
+                                        <div class="container-fluid">
                                             <div class="row">
                                                 <div class="col-6">
                                                     <img class="shadow w-100 rounded-circle"
-                                                         src="https://cdn.sofifa.com/players/000/041/22_60.png">
+                                                         src="{{ player_photo }}">
                                                 </div>
                                                 <div class="col-6 float-right">
-                                                    <h5>AGE:37</h5>
-                                                    <h5>Pos: CAM</h5>
-                                                    <h5>Overall:79</h5>
-                                                    <h5>Foot:Right</h5>
+                                                    <h5>AGE: {{ player_age }}</h5>
+                                                    <h5>Pos: {{ player_pos }}</h5>
+                                                    <h5>Overall: {{ player_overall }}</h5>
+                                                    <h5>Foot: {{ player_foot }}</h5>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -42,50 +42,16 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-10 offset-1 border-dark">
+                                                <div class="col-10 offset-1 border-dark" style="max-height: 300px; overflow: scroll">
                                                     <form>
+                                                        {% for key, value in player_status.items %}
                                                         <div class="form-check">
                                                             <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                                                             <label class="form-check-label" for="defaultCheck1">
-                                                                Default checkbox
+                                                                {{ key }} : {{ value }}
                                                             </label>
                                                         </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                                            <label class="form-check-label" for="defaultCheck1">
-                                                                Default checkbox
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                                            <label class="form-check-label" for="defaultCheck1">
-                                                                Default checkbox
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                                            <label class="form-check-label" for="defaultCheck1">
-                                                                Default checkbox
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                                            <label class="form-check-label" for="defaultCheck1">
-                                                                Default checkbox
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                                            <label class="form-check-label" for="defaultCheck1">
-                                                                Default checkbox
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                                            <label class="form-check-label" for="defaultCheck1">
-                                                                Default checkbox
-                                                            </label>
-                                                        </div>
+                                                        {% endfor %}
                                                     </form>
                                                 </div>
                                             </div>
@@ -94,11 +60,8 @@
                                     <div class="col-lg-7"></div>
                                 </div>
                             </div>
-                            <div class="col-7">
+                            <div class="col-8">
                                 <div class="card bg-black h-100">
-                                    <div class="card-header">
-                                        <h2 class="text-white">Player Info Display</h2>
-                                    </div>
                                     <div class="card-body h-100">
                                         <div id="player-info-charts"
                                              class="h-100"></div>
@@ -118,7 +81,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Prediction for Iniesta</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Prediction for {{ player_name }}</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -127,7 +90,7 @@
                 <div class="row mx-4">
                     <div class="col-4">
                         <img class="shadow w-100 rounded-circle my-3"
-                             src="https://cdn.sofifa.com/players/000/041/22_60.png">
+                             src="{{ player_photo }}">
                         <h5>AGE:37</h5>
                         <h5>Pos: CAM</h5>
                         <h5>Overall:79</h5>
@@ -198,28 +161,33 @@ var myChart = echarts.init(chartDom);
 var option;
 
 option = {
-  radar: {
-    // shape: 'circle',
-    indicator: [
-      { name: 'Sales', max: 6500 },
-      { name: 'Administration', max: 16000 },
-      { name: 'Information Technology', max: 30000 },
-      { name: 'Customer Support', max: 38000 },
-      { name: 'Development', max: 52000 },
-      { name: 'Marketing', max: 25000 }
-    ]
-  },
-  series: [
-    {
-      name: 'Budget vs spending',
-      type: 'radar',
-      data: [{
-          value: [5000, 14000, 28000, 26000, 42000, 21000],
-          name: 'Actual Spending'
-        }
-      ]
-    }
-  ]
+    radar: {
+        // shape: 'circle',
+        indicator: [
+            {% for key, value in player_status.items %}
+                { name: '{{ key }}', max: 100 },
+            {% endfor %}
+        ],
+        silent: false,
+        axisLabel:[
+            overflow = 'truncate'
+        ]
+    },
+    series: [{
+        name: '{{ player_name }}\'s Rating',
+        type: 'radar',
+        data: [{
+            value: [
+                {% for key, value in player_status.items %}
+                    {{ value }},
+                {% endfor %}
+            ],
+            name: 'Player Aspects'
+            }
+        ],
+        label:{show:true},
+        areaStyle:{},
+    }]
 };
 
 myChart.setOption(option);
