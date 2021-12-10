@@ -112,7 +112,7 @@ def athletes(request, index):
 
         if index == '':
             index = 1
-        pag = Paginator(player_list_2022, 20)
+        pag = Paginator(player_list_2022, 30)
         page = pag.page(index)
 
         res_dict = {
